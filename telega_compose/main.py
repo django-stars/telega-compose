@@ -38,7 +38,7 @@ def render_state(state, yml_filename):
     return rendered
 
 
-def parse_cli_args():
+def parse_cli_args(args):
     usage_text = """example:
 
      {app_file} local config
@@ -52,13 +52,13 @@ def parse_cli_args():
     )
     parser.add_argument('state', help="state to render docker-compose file")
     parser.add_argument('-f', '--file', help="states file, by default: states.yml")
-    return parser.parse_known_args()
+    return parser.parse_known_args(args)
 
 
 def cli():
 
     # Render state
-    args, compose_args = parse_cli_args()
+    args, compose_args = parse_cli_args(sys.argv[1:])
     if args.file is None:
         filename = os.path.join(os.getcwd(), 'states.yml')
     else:

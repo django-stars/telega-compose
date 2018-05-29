@@ -8,4 +8,7 @@ build:
 release:
 	python setup.py sdist upload
 
+test:
+	pytest --cov-report html --cov=telega_compose
+
 sinclude makefile-local
