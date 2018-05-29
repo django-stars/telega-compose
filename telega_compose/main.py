@@ -14,7 +14,7 @@ except ImportError:
     from yaml import Loader, SafeDumper
 
 
-def render_state(state: str, yml_filename: str) -> str:
+def render_state(state, yml_filename):
     assert os.path.exists(yml_filename), "States file {filename} not found.".format(filename=yml_filename)
 
     with open(yml_filename, 'r') as yml_file:
@@ -38,7 +38,7 @@ def render_state(state: str, yml_filename: str) -> str:
     return rendered
 
 
-def parse_cli_args() -> tuple:
+def parse_cli_args():
     usage_text = """example:
 
      {app_file} local config
@@ -55,7 +55,7 @@ def parse_cli_args() -> tuple:
     return parser.parse_known_args()
 
 
-def cli() -> None:
+def cli():
 
     # Render state
     args, compose_args = parse_cli_args()
