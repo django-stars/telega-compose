@@ -1,6 +1,15 @@
 telega-compose
 --------------
 
+.. image:: https://travis-ci.org/django-stars/telega-compose.svg?branch=master
+    :target: https://travis-ci.org/django-stars/telega-compose
+
+.. image:: https://codecov.io/gh/django-stars/telega-compose/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/django-stars/telega-compose
+
+.. image:: https://badge.fury.io/py/telega-compose.svg
+    :target: https://badge.fury.io/py/telega-compose
+
 This is a wrapper on `docker-compose`_, which extends `compose file`_ syntax to keep several configurations (states) of your services in one file, with similar to docker-compose file syntax using native YAML `anchors and aliases`_.
 
 How it works:
